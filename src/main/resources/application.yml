@@ -18,6 +18,12 @@ spring:
       ddl-auto: update
   application:
     name: backend
+
+backend:
+  app:
+    jwtSecret: YWtjYU5hdXRpbHVzIGR1
+    jwtExpirationMs: 86400000
+
 logging:
   file:
     name: logs/webapp.log
