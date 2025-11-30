@@ -21,7 +21,7 @@ spring:
 
 backend:
   app:
-    jwtSecret: YWtjYU5hdXRpbHVzIGR1
+    jwtSecret: QW1hc1NlY3VyZUtleUdlbmVyYXRlZF9CaXROV1AxMjM0NTZfSFMtMjU2X0pXVA==
     jwtExpirationMs: 86400000
 
 logging:

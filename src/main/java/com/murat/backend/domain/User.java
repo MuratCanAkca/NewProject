@@ -37,7 +37,7 @@ public class User {
     private String phoneNumber;
 
     @Column(length = 150, nullable = false)
-    private String addres;
+    private String address;
 
     @Column(length = 15, nullable = false)
     private String zipCode;

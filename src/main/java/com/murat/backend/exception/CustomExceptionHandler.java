@@ -1,6 +1,7 @@
 package com.murat.backend.exception;
 
 import com.murat.backend.exception.message.ApiResponseError;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.ConversionNotSupportedException;
 import org.springframework.beans.TypeMismatchException;
 import org.springframework.http.HttpHeaders;
@@ -90,5 +91,10 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
         return buildResponseEntity(error);
     }
 
+    @ExceptionHandler(Exception.class)
+    protected ResponseEntity<Object> handleException(Exception ex, HttpServletRequest request) {
+        ApiResponseError error = new ApiResponseError(HttpStatus.INTERNAL_SERVER_ERROR, ex.getMessage(), request.getServletPath());
+        return buildResponseEntity(error);
+    }
 }
 
